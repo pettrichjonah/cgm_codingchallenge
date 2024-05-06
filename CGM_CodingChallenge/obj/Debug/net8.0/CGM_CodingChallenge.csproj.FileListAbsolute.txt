@@ -1,0 +1,14 @@
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\bin\Debug\net8.0\CGM_CodingChallenge.exe
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\bin\Debug\net8.0\CGM_CodingChallenge.deps.json
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\bin\Debug\net8.0\CGM_CodingChallenge.runtimeconfig.json
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\bin\Debug\net8.0\CGM_CodingChallenge.dll
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\bin\Debug\net8.0\CGM_CodingChallenge.pdb
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\obj\Debug\net8.0\CGM_CodingChallenge.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\obj\Debug\net8.0\CGM_CodingChallenge.AssemblyInfoInputs.cache
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\obj\Debug\net8.0\CGM_CodingChallenge.AssemblyInfo.cs
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\obj\Debug\net8.0\CGM_CodingChallenge.csproj.CoreCompileInputs.cache
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\obj\Debug\net8.0\CGM_CodingChallenge.dll
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\obj\Debug\net8.0\refint\CGM_CodingChallenge.dll
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\obj\Debug\net8.0\CGM_CodingChallenge.pdb
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\obj\Debug\net8.0\CGM_CodingChallenge.genruntimeconfig.cache
+c:\Users\jonpe\CGM_CodingChallenge\CGM_CodingChallenge\obj\Debug\net8.0\ref\CGM_CodingChallenge.dll
