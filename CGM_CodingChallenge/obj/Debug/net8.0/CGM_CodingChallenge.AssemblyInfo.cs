@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CGM_CodingChallenge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+494278937d4c4fde6648a897336fed39b394214c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af575688d38d88180ae64cfd99ca3160122a438f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CGM_CodingChallenge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CGM_CodingChallenge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

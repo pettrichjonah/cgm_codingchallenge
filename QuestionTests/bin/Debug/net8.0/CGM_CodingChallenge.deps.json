@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CGM_CodingChallenge/1.0.0": {
+        "runtime": {
+          "CGM_CodingChallenge.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CGM_CodingChallenge/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
