@@ -1,51 +1,59 @@
 ﻿using System.Text.RegularExpressions;
 
-public class Program {
-	public static Dictionary<int, Question> questiondict = new Dictionary<int, Question>();
+public static class Program
+{
+	public static List<Question> questionList = new();
 
-	static void Main() 
+	static void Main()
 	{
-		while(true)
+		while (true)
 		{
-			Console.WriteLine("Do you want to ask an existing question (1) or add a new one (2)?"); 
+			Console.WriteLine("Do you want to ask an existing question (1) or add a new one (2)?");
 
-			switch(GetInput())
+			switch (GetInput())
 			{
 				case "1":
 					Console.WriteLine("\nAlright, ask me a question!");
-					int question_id = SearchQuestion(GetInput());
+					var question = SearchQuestion(GetInput());
 
-					if(question_id!=0)
+					if (question != null)
 					{
-						Console.WriteLine(GetAnswers(question_id)); //outputs question
+						Console.WriteLine(GetAnswers(question)); //outputs question
 					}
 					else
 						Console.WriteLine("- the answer to life, universe and everything is 42\n");
 
-					continue;
-
+					break;
 				case "2":
 					Console.WriteLine("\nI'm excited! Please enter the question you want to add!");
-					Console.WriteLine("Input format: <question>? \"<answer1>\" \"<answer2>\" \"<answerx>\""); //escape characters because of extensive double quote usage
-					questiondict.Add(questiondict.Count()+1,CreateNewQuestion(GetInput()));
 
-					continue; 
+					//escape characters because of extensive double quote usage
+					Console.WriteLine("Input format: <question>? \"<answer1>\" \"<answer2>\" \"<answerx>\"");
 
+					questionList.Add(CreateNewQuestion(GetInput()));
+
+					break;
 				default:
 					Console.WriteLine("Enter a valid option!");
 
-					continue;
+					break;
 			}
 		}
 	}
 
-	private static string GetInput() //prevents user from entering nothing
+	/// <summary>
+	/// Prevents User from entering nothing by trapping inside a loop as long as input isn't given.
+	/// </summary>
+	private static string GetInput()
 	{
-		string input = "";
-		
-		do {
+		string? input;
+
+		do
+		{
 			input = Console.ReadLine();
-			if (string.IsNullOrEmpty(input)) {
+
+			if (string.IsNullOrEmpty(input))
+			{
 				Console.WriteLine("Your input can't be empty!");
 			}
 		} while (string.IsNullOrEmpty(input));
@@ -53,51 +61,64 @@ public class Program {
 		return input;
 	}
 
-	public static Question CreateNewQuestion(string input) 
+	/// <summary>
+	/// Reads the input string, builds an Object of Question and returns it.
+	/// </summary>
+	public static Question CreateNewQuestion(string input)
 	{
-		string[] splitinput = input.Split('?');
+		var inputSplitted = input.Split('?');
+		var question = inputSplitted[0].Trim();
 
-		string question = splitinput[0].Trim();
-		if(question.Length>255)
+		//warns user that question is too long and returns to program start2
+		if (question.Length > 255)
 		{
-			Console.WriteLine("Question can't be longer than 255 chars! Please try again! "); //warns user that question is too long and returns to program start
+			Console.WriteLine("Question can't be longer than 255 chars! Please try again! ");
 		}
 
-		string tempanswerspace = splitinput[1].Trim(); //holds: "Pizza" "Spaghetti" "Ice cream"
-		string pattern = "\"(.*?)\"";
-		List<string> answers = Regex.Split(tempanswerspace, pattern).ToList<string>();
+		var answersAsString = inputSplitted[1].Trim(); //holds: "Pizza" "Spaghetti" "Ice cream"
+		Console.WriteLine(answersAsString);
 
-		//removing the whitespace list items; backwards because List can't be changed while iterating
-		for (int i = answers.Count - 1; i >= 0; i--)
+		var pattern = "\"(.*?)\"";
+		var answers = Regex.Matches(answersAsString, pattern);
+
+		var answerList = new List<string>();
+
+		foreach (Match match in answers)
 		{
-			if(string.IsNullOrWhiteSpace(answers[i]))
-				answers.RemoveAt(i);
+			answerList.Add(match.Groups[1].Value);
 		}
 
-		Question q = new Question(question + "?", answers); //adds question mark back to question for exact comparison
+		var q = new Question(question + "?", answerList); //adds question mark at the end of the question for exact comparison
+
 		return q;
 	}
 
-	public static int SearchQuestion(String inputq) //if this method returns 0, question has not been found
+	/// <summary>
+	/// If this method returns null, question has not been found.
+	/// </summary>
+	public static Question? SearchQuestion(string input)
 	{
-		foreach(KeyValuePair<int, Question> q in questiondict)
+		foreach (var q in questionList)
 		{
-			if(inputq == q.Value.question)
-				return q.Key;
+			if (input == q.question)
+				return q;
 		}
-		return 0;
+
+		return null;
 	}
 
-	public static string GetAnswers(int qkey)
+	/// <summary>
+	/// This method builds a string to output the according answers for the given question.
+	/// </summary>
+	public static string GetAnswers(Question question)
 	{
-		string answeroutput = "";
-		Question foundq = questiondict[qkey];
+		string answerOutput = string.Empty;
 
-		foreach(String answer in foundq.answers)
+		foreach (string answer in question.answers)
 		{
-			answeroutput += "- " + answer + "\n";
+			answerOutput += $"- {answer}\n";
 		}
 
-		return answeroutput;
+		return answerOutput;
 	}
 }

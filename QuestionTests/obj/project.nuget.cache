@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/3dHnG+NV4dY4XEk+PP+ZF0VwNpzR9+EOcRMEOMY9o8V4+nXh8iYqKhUG+qR3rnWglgllbYfINDRFL6rj+vcWw==",
+  "dgSpecHash": "33OYbRwovDdnsuBASn5+4wZMmn3ghjLWcLkXHKuv07osXKpX7CgE6rhIyhVUyr6sVlob3LWRrFN2RqCnWjsi2Q==",
   "success": true,
-  "projectFilePath": "c:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj",
+  "projectFilePath": "C:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jonpe\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\jonpe\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

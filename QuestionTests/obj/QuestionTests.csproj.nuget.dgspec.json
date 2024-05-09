@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj": {}
+    "C:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj": {}
   },
   "projects": {
-    "c:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj": {
+    "C:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj",
         "projectName": "CGM_CodingChallenge",
-        "projectPath": "c:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj",
+        "projectPath": "C:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj",
         "packagesPath": "C:\\Users\\jonpe\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\obj\\",
+        "outputPath": "C:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jonpe\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "c:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj": {
+    "C:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj",
+        "projectUniqueName": "C:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj",
         "projectName": "QuestionTests",
-        "projectPath": "c:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj",
+        "projectPath": "C:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\QuestionTests.csproj",
         "packagesPath": "C:\\Users\\jonpe\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\obj\\",
+        "outputPath": "C:\\Users\\jonpe\\CGM_CodingChallenge\\QuestionTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jonpe\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -84,8 +84,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj": {
-                "projectPath": "c:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj"
+              "C:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj": {
+                "projectPath": "C:\\Users\\jonpe\\CGM_CodingChallenge\\CGM_CodingChallenge\\CGM_CodingChallenge.csproj"
               }
             }
           }
