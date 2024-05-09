@@ -14,11 +14,11 @@ public static class Program
 			{
 				case "1":
 					Console.WriteLine("\nAlright, ask me a question!");
-					var question = SearchQuestion(GetInput());
+					var requestedQuestion = SearchQuestion(GetInput());
 
-					if (question != null)
+					if (requestedQuestion != null)
 					{
-						Console.WriteLine(GetAnswers(question)); //outputs question
+						Console.WriteLine(GetAnswers(requestedQuestion)); //outputs question
 					}
 					else
 						Console.WriteLine("- the answer to life, universe and everything is 42\n");
@@ -29,8 +29,18 @@ public static class Program
 
 					//escape characters because of extensive double quote usage
 					Console.WriteLine("Input format: <question>? \"<answer1>\" \"<answer2>\" \"<answerx>\"");
+					var question = CreateNewQuestion(GetInput());
 
-					questionList.Add(CreateNewQuestion(GetInput()));
+					if (question.question.Length > 255)
+					{
+						Console.WriteLine("Question can't be longer than 255 chars!");
+					}
+					else if (question.answers.Count < 1)
+					{
+						Console.WriteLine("You need to add at least one answer!");
+					}
+					else
+						questionList.Add(question);				
 
 					break;
 				default:
@@ -70,10 +80,7 @@ public static class Program
 		var question = inputSplitted[0].Trim();
 
 		//warns user that question is too long and returns to program start2
-		if (question.Length > 255)
-		{
-			Console.WriteLine("Question can't be longer than 255 chars! Please try again! ");
-		}
+
 
 		var answersAsString = inputSplitted[1].Trim(); //holds: "Pizza" "Spaghetti" "Ice cream"
 		Console.WriteLine(answersAsString);
